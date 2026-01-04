@@ -1,0 +1,888 @@
+<!DOCTYPE html><html lang="he" dir="rtl"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="מידע מקצועי על הפרעה פוסט-טראומטית (PTSD) - תהליך ההחלמה, עבודת אבל וקבלה עצמית. עוזי כרמי, פסיכולוג קליני מוסמך.">
+    <meta name="robots" content="index, follow">
+    <title>Ptsd</title>
+    <style>
+        :root {
+            --primary-dark: #3D3C47;
+            --accent-green: #5B7432;
+            --text-gray: #707070;
+            --medium-gray: #999999;
+            --light-gray: #E0E0E0;
+            --border-gray: #DBDBDB;
+            --white: #FFFFFF;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: var(--text-gray);
+            background-color: #F9F9F9;
+            direction: rtl;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            background: var(--accent-green);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            z-index: 100;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo a {
+            display: block;
+            line-height: 0;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .logo img:hover {
+            transform: scale(1.05);
+        }
+
+        nav {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--primary-dark);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            white-space: nowrap;
+        }
+
+        nav a:hover {
+            background-color: var(--light-gray);
+            color: var(--accent-green);
+        }
+
+        nav a.active {
+            background-color: var(--accent-green);
+            color: var(--white);
+        }
+
+        nav a:focus {
+            outline: 2px solid var(--accent-green);
+            outline-offset: 2px;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .mobile-menu-toggle:focus {
+            outline: 2px solid var(--accent-green);
+            outline-offset: 2px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, rgba(61, 60, 71, 0.95), rgba(91, 116, 50, 0.9)), url('https://mypsy.co.il/wp-content/themes/yoo_infinite_wp/images/header.jpg');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .main-content {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px var(--shadow);
+        }
+
+        .main-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.9;
+        }
+
+        .main-content p:first-of-type {
+            font-size: 1.2rem;
+            color: var(--primary-dark);
+            font-weight: 500;
+        }
+
+        .sidebar {
+            position: sticky;
+            top: 100px;
+        }
+
+        .sidebar-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px var(--shadow);
+            text-align: center;
+        }
+
+        .sidebar-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-content p {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--light-gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-green);
+        }
+
+        @media (max-width: 1024px) {
+            .content-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: static;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 1rem;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 300px;
+                height: 100vh;
+                background-color: var(--white);
+                flex-direction: column;
+                padding: 5rem 1rem 2rem;
+                box-shadow: -2px 0 10px var(--shadow);
+                transition: right 0.3s ease;
+                overflow-y: auto;
+                gap: 0;
+            }
+
+            nav.active {
+                right: 0;
+            }
+
+            nav a {
+                width: 100%;
+                padding: 1rem;
+                border-bottom: 1px solid var(--light-gray);
+            }
+
+            .mobile-menu-close {
+                position: absolute;
+                top: 1rem;
+                left: 1rem;
+                background: none;
+                border: none;
+                font-size: 2rem;
+                color: var(--primary-dark);
+                cursor: pointer;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .main-content {
+                padding: 2rem 1.5rem;
+            }
+
+            .main-content p {
+                font-size: 1rem;
+            }
+
+            main {
+                padding: 0 1rem;
+                margin: 2rem auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo img {
+                height: 45px;
+            }
+
+            .hero {
+                padding: 3rem 1rem;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<style>
+/* Zappy Attribution Header Styles */
+.zappy-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.04);
+  padding: 16px 10px;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  color: #4a4a4a;
+  line-height: 21px;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 21px;
+  direction: ltr !important;
+  unicode-bidi: isolate;
+}
+
+    .zappy-header p {
+      margin: 0;
+      padding: 0;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+      white-space: nowrap;
+      display: inline-block;
+      vertical-align: baseline;
+      margin-bottom: 0 !important;
+      direction: ltr !important;
+    }
+
+.zappy-header .zappy-link {
+  font-weight: 700;
+  color: #4a4a4a;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.zappy-header .zappy-link:hover {
+  opacity: 0.7;
+}</style>
+    <!-- Cookie Consent -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
+    <!-- Mickidum Accessibility Toolbar -->
+    <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
+<!-- Zappy Analytics -->
+<script>
+(function() {
+  'use strict';
+  
+  // Configuration
+  var config = {
+    websiteId: 'd84459d1-13a6-4942-9a75-c9daf4fd4691',
+    apiUrl: 'https://qaapi.zappy5.com/api/analytics/track',
+    sessionDuration: 30 * 60 * 1000, // 30 minutes
+    visitorDuration: 30 * 24 * 60 * 60 * 1000, // 30 days
+    trackPageViews: true,
+    trackClicks: true,
+    trackFormSubmissions: true
+  };
+  
+  // Generate or retrieve persistent visitor ID (30 days)
+  function getVisitorId() {
+    var visitorKey = 'zappy_visitor_' + config.websiteId;
+    var visitor = null;
+    
+    try {
+      visitor = localStorage.getItem(visitorKey);
+      if (visitor) {
+        var visitorData = JSON.parse(visitor);
+        var now = Date.now();
+        
+        // Check if visitor ID is still valid (30 days)
+        if (now - visitorData.created < config.visitorDuration) {
+          // Update last seen timestamp
+          visitorData.lastSeen = now;
+          localStorage.setItem(visitorKey, JSON.stringify(visitorData));
+          return visitorData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: LocalStorage not available');
+    }
+    
+    // Generate new visitor ID
+    var newVisitorId = 'zv_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      localStorage.setItem(visitorKey, JSON.stringify({
+        id: newVisitorId,
+        created: Date.now(),
+        lastSeen: Date.now()
+      }));
+    } catch (e) {
+      // Continue without local storage
+    }
+    
+    return newVisitorId;
+  }
+  
+  // Generate or retrieve session ID (30 minutes)
+  function getSessionId() {
+    var sessionKey = 'zappy_session_' + config.websiteId;
+    var session = null;
+    
+    try {
+      session = sessionStorage.getItem(sessionKey);
+      if (session) {
+        var sessionData = JSON.parse(session);
+        var now = Date.now();
+        
+        // Check if session is still valid
+        if (now - sessionData.timestamp < config.sessionDuration) {
+          // Update timestamp
+          sessionData.timestamp = now;
+          sessionStorage.setItem(sessionKey, JSON.stringify(sessionData));
+          return sessionData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: SessionStorage not available');
+    }
+    
+    // Generate new session ID
+    var newSessionId = 'zs_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      sessionStorage.setItem(sessionKey, JSON.stringify({
+        id: newSessionId,
+        timestamp: Date.now()
+      }));
+    } catch (e) {
+      // Continue without session storage
+    }
+    
+    return newSessionId;
+  }
+  
+  var visitorId = getVisitorId();
+  var sessionId = getSessionId();
+  
+  // Track an event
+  function trackEvent(eventType, data) {
+    data = data || {};
+    
+    var eventData = {
+      website_id: config.websiteId,
+      event_type: eventType,
+      page_path: window.location.pathname,
+      referrer: document.referrer || 'direct',
+      visitor_id: visitorId,
+      session_id: sessionId,
+      metadata: data
+    };
+    
+    // Use sendBeacon if available (better for page unload events)
+    if (navigator.sendBeacon) {
+      var blob = new Blob([JSON.stringify(eventData)], { type: 'application/json' });
+      navigator.sendBeacon(config.apiUrl, blob);
+    } else {
+      // Fallback to fetch
+      fetch(config.apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(eventData),
+        keepalive: true
+      }).catch(function(error) {
+        console.warn('Zappy Analytics: Failed to track event', error);
+      });
+    }
+  }
+  
+  // Track page view
+  if (config.trackPageViews) {
+    trackEvent('pageview', {
+      title: document.title,
+      url: window.location.href
+    });
+  }
+  
+  // Track clicks on important elements
+  if (config.trackClicks) {
+    document.addEventListener('click', function(e) {
+      var target = e.target;
+      
+      // Track button clicks (counted as actions)
+      if (target.tagName === 'BUTTON' || target.closest('button')) {
+        var button = target.tagName === 'BUTTON' ? target : target.closest('button');
+        trackEvent('click', {
+          element: 'button',
+          text: button.textContent.trim().substring(0, 100),
+          id: button.id || null,
+          class: button.className || null
+        });
+      }
+      
+      // Track link clicks (navigation - not counted as actions)
+      else if (target.tagName === 'A' || target.closest('a')) {
+        var link = target.tagName === 'A' ? target : target.closest('a');
+        trackEvent('navigation', {
+          element: 'link',
+          text: link.textContent.trim().substring(0, 100),
+          href: link.href,
+          external: link.hostname !== window.location.hostname
+        });
+      }
+    }, true);
+  }
+  
+  // Track form submissions
+  if (config.trackFormSubmissions) {
+    document.addEventListener('submit', function(e) {
+      var form = e.target;
+      
+      trackEvent('form_submit', {
+        form_id: form.id || null,
+        form_name: form.name || null,
+        form_action: form.action || null,
+        form_method: form.method || 'GET'
+      });
+    }, true);
+  }
+  
+  // Track time on page (send on page unload)
+  var pageLoadTime = Date.now();
+  
+  window.addEventListener('beforeunload', function() {
+    var timeOnPage = Math.floor((Date.now() - pageLoadTime) / 1000); // in seconds
+    
+    trackEvent('page_unload', {
+      time_on_page: timeOnPage,
+      page_path: window.location.pathname
+    });
+  });
+  
+  // Expose tracking function globally for custom events
+  window.zappyAnalytics = {
+    track: trackEvent,
+    getVisitorId: function() { return visitorId; },
+    getSessionId: function() { return sessionId; }
+  };
+  
+})();
+</script>
+<!-- End Zappy Analytics -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style id="zappy-mobile-submenu-styles">
+      /* Mobile submenu accordion styles */
+      @media (max-width: 768px) {
+        .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu {
+          position: static !important;
+          transform: none !important;
+          box-shadow: none !important;
+          background: transparent !important;
+          margin-top: 0 !important;
+          max-height: 0;
+          overflow: hidden;
+          opacity: 0;
+          visibility: hidden;
+          transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, padding 0.3s ease;
+          padding: 0 !important;
+          border-radius: 0 !important;
+        }
+        .sub-menu.mobile-expanded {
+          max-height: 500px !important;
+          opacity: 1 !important;
+          visibility: visible !important;
+          padding: 8px 0 8px 16px !important;
+        }
+        [dir="rtl"] .sub-menu.mobile-expanded, html[lang="he"] .sub-menu.mobile-expanded, html[lang="ar"] .sub-menu.mobile-expanded {
+          padding: 8px 16px 8px 0 !important;
+        }
+        .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu {
+          opacity: 0; visibility: hidden; pointer-events: none;
+        }
+        .nav-menu li > .sub-menu.mobile-expanded, nav li > .sub-menu.mobile-expanded, .navbar li > .sub-menu.mobile-expanded, #navMenu li > .sub-menu.mobile-expanded {
+          opacity: 1 !important; visibility: visible !important; pointer-events: auto !important;
+        }
+        .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) {
+          display: flex !important; flex-wrap: wrap !important; align-items: center !important;
+        }
+        .nav-menu li:has(.sub-menu) > a, nav li:has(.sub-menu) > a, .navbar li:has(.sub-menu) > a, #navMenu li:has(.sub-menu) > a {
+          flex: 1 !important;
+        }
+        .mobile-submenu-toggle {
+          display: flex !important; align-items: center !important; justify-content: center !important;
+          width: 44px !important; height: 44px !important; background: transparent !important;
+          border: none !important; cursor: pointer !important; padding: 0 !important; margin: 0 !important;
+          flex-shrink: 0 !important; -webkit-tap-highlight-color: transparent;
+        }
+        .mobile-submenu-toggle::after {
+          content: '' !important; display: block !important; width: 0 !important; height: 0 !important;
+          border-left: 6px solid transparent !important; border-right: 6px solid transparent !important;
+          border-top: 7px solid currentColor !important; transition: transform 0.3s ease !important;
+        }
+        .mobile-submenu-toggle.expanded::after { transform: rotate(180deg) !important; }
+        .nav-menu li:has(.sub-menu) > .sub-menu, nav li:has(.sub-menu) > .sub-menu, .navbar li:has(.sub-menu) > .sub-menu, #navMenu li:has(.sub-menu) > .sub-menu {
+          flex-basis: 100% !important; width: 100% !important;
+        }
+        .sub-menu a { padding: 10px 0 !important; display: block !important; font-size: 14px !important; }
+        .sub-menu a:hover { background-color: transparent !important; }
+      }
+      @media (min-width: 769px) { .mobile-submenu-toggle { display: none !important; } }
+    </style>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<!-- Zappy Attribution Header -->
+<div id="zappy-attribution-header" class="zappy-header" style="display: none;">
+  <p>Happily created by&nbsp;<a href="https://zappy5.com" target="_blank" rel="noopener noreferrer" class="zappy-link">Zappy</a></p>
+</div>
+    <a href="#main-content" class="skip-link">דלג לתוכן הראשי</a>
+
+    <header role="banner">
+        <div class="header-container">
+            <div class="logo">
+                <a href="/" aria-label="עוזי כרמי - פסיכולוג קליני - דף הבית">
+                    <img src="/assets/textwidget-5.webp" alt="עוזי כרמי - פסיכולוג קליני" width="200" height="60">
+                </a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="תפריט ניווט" aria-expanded="false">
+                ☰
+            </button>
+            <nav role="navigation" aria-label="ניווט ראשי">
+                <button class="mobile-menu-close" aria-label="סגור תפריט">×</button>
+                <a href="/background/">רקע והכשרה</a>
+                <a href="/psychology/">מה זה טיפול פסיכולוגי ?</a>
+                <a href="/difficulties/">קשיים שונים</a>
+                <a href="/faq/">שאלות ותשובות</a>
+                <a href="/articles/">מאמרים</a>
+                <a href="/contact/">צור קשר</a>
+                <a href="/difficulties/ptsd/" class="active">Ptsd</a>
+                <a href="/difficulties/anxiety-treatment/">Anxiety Treatment</a>
+                <a href="/faq/approach/">Approach</a>
+                <a href="/faq/howmuchtime/">Howmuchtime</a>
+                <a href="/faq/transferance/">Transferance</a>
+                <a href="/faq/clinical-transferance/">Clinical Transferance</a>
+                <a href="/faq/tired/">Tired</a>
+                <a href="/faq/meditation/">Meditation</a>
+                <a href="/articles/transience/">Transience</a>
+                <a href="/articles/transience-part2/">Transience Part2</a>
+                <a href="/articles/transience-part3/">Transience Part3</a>
+                <a href="/articles/psychoanalysis/">Psychoanalysis</a>
+                <a href="/articles/freud/">Freud</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>הפרעה פוסט-טראומטית (PTSD)</h1>
+        </div>
+    </section>
+
+    <main id="main-content" role="main">
+        <div class="content-wrapper">
+            <article class="main-content">
+                <p>אדם עובר חוויה קשה. אירוע הכרוך באכזריות, מוות, אונס או תאונה. בהמשך הוא מגלה שנפשו נותרה שבורה. האירוע מסרב לחלוף מזיכרונו. סיוטים פוקדים את לילותיו, רעשים קלים מבהילים אותו, הוא מתפרץ בזעם בשל דברים שבעבר לא הכעיסו אותו. תפקודו היום יומי נפגע. תחושות של זרות וריחוק משתלטות עליו והוא מקפיד להימנע מכל מה שעשוי להזכיר את האירוע הטראומטי.</p>
+
+                <p>מובן שבחיבור זה לא אוכל לתאר באופן מקיף את הטיפול בנפגע של הפרעה פוסט-טראומטית, במקום זאת אנסה להתמקד בשתי נקודות משמעותיות.</p>
+
+                <p>דומה שהפרעה פוסט-טראומטית היא אחת מהאכזריות שבהפרעות הרגשיות. לא די שאדם עבר אונס, התעללות או מלחמה, אלא שעתה הוא כמו נענש בשנית על דבר שלא עשה – והשבר מסרב לחלוף. באופן טבעי הוא מתקומם כנגד השבר, מייחל להיעלמותו ולחזרה של איכות החיים שקדמה לאירוע. לעיתים קרובות גם סביבתו הקרובה מגיבה באופן דומה. בני משפחה של נפגעי פוסט-טראומה מתלוננים לא פעם שהאדם השתנה, הפך לצל של עצמו. קשה להם לשאת את הפגיעה, וקשה להם לסבול את התקפי הזעם והירידה בתפקוד. מתוך כוונות טובות הם מפעילים על האדם לחץ לחזור ולהיות כפי שהיה. התוצאה עלולה להיות טראגית. האדם סובל עתה שלוש (ואפילו ארבע) פעמים – מהפגיעה המקורית, מהפגיעה המתמשכת, מחוסר הקבלה העצמית ומהלחץ הסביבתי. לקושי שמייצרת ההפרעה מתלווים עתה גם בדידות, חוסר מובנות וחוסר קבלה עצמית. קל להיווכח שזו אינה אווירה המעודדת החלמה…</p>
+
+                <p>החלמה מטראומה אינה חזרה למה שהיה. קרב, אונס אלים או אלימות פיזית קשה משנים את האדם שעבר אותם. פגיעה בהיקף כזה לא נעלמת, ועדיין ניתן לחיות חיים טובים ומלאי משמעות גם לאחר טראומה.</p>
+
+                <p>לא פעם טיפול באדם הסובל מהפרעה פוסט-טראומטית מתחיל בנקודה זו בדיוק, במה שמכונה "עבודת אבל". כאשר אדם קרוב לנו מת איננו חוזרים מייד לחיים כאילו דבר לא קרה. אנו עוברים תהליך של אבל. האדם עשוי להכחיש את המוות בהתחלה, בהמשך לכעוס, אחר כך לחוש דיכאון ורק בסוף התהליך להשלים עם האובדן. בדומה – מי שסובל מפוסט-טראומה צריך למצוא את דרכו להתאבל על שאיבד ולהשלים עם הפגיעה כדי שיוכל לחזור לחיים. ניסיון עיקש להמשיך כאילו דבר לא קרה עלול להחריף את השפעת הטראומה. קבלה של השבר על-ידי האדם ועל ידי סביבתו מייצרת אווירה פנימית וחיצונית המאפשרת תהליך של החלמה.</p>
+
+                <p>אם כן, קבלה היא עניין מרכזי בהחלמה מטראומה, אלא שלא פעם הסובלים מההפרעה אינם מעזים להכיר בדבר שמכאיב להם ביותר, וודאי שלא לקבלו. כך למשל, הלום קרב שהנגמ"ש שלו ספג פגיעה ישירה בקרב וכל חבריו נהרגו. לכאורה, די והותר באירוע כזה כדי לצרוב טראומה בנפשו של אדם. אך אותו אדם סבל מטראומה אחרת, ספציפית יותר. כאשר דיברתי איתו על אירועי הקרב שוב ושוב התברר שכשברח מהנגמ"ש הבוער, פצוע ומדמם, חבריו עדיין היו בחיים. הוא שמע את זעקתם והתלבט אם להיכנס שוב לנגמ"ש וללהבות. הוא לא עשה זאת וחייו ניצלו, אך הוא לא יכול להשתחרר מהמחשבה שאם היה נכנס אולי היה מציל לפחות את אחד מחבריו. כאן (ובמקרים רבים אחרים) רק לאחר שנחשפה הטראומה האמיתית אפשר היה להתחיל לאפשר לו לקבל את עצמו על פגמיו. אדם אמיץ פחות ומוסרי פחות ממה שהיה מצפה מעצמו, אך בכל זאת אדם שזכאי לחיות.</p>
+
+                <p>במרבית המקרים, טראומה אינה פשוט אירוע קשה שהאדם חווה, אלא קשורה לאופן בו הוא חווה את האירוע ולתפקיד שהוא יחס לעצמו באירוע. לא פעם הטראומה מועצמת בשל ציפיות עצמיות מוגזמות וביקורת עצמית המייצרים בושה והסתרה. אשה שעברה אונס אלים סיפרה לי לאחר זמן ארוך בטיפול שאחד מידידיה הזהיר אותה לא להסתובב באזור בשעות הערב ואחר יעץ לה להתקין אפליקציית סלולר המשמשת כאזעקה. היא לא עשתה זאת וחשה שבעצם היא אשמה באונס, שהיא אדם לא אחראי ולכן באופן כלשהו היה מגיע לה להיאנס. גם כאן, חלק משמעותי מהעבודה היה לאפשר לה לקבל את עצמה, גם אם טעתה, לא נזהרה ולא שעתה לעצות שהתבררו בדיעבד כנכונות. כולנו טועים, כולנו לא מקשיבים לעצות חכמות. זה חלק מההתנהגות האנושית. קשה מאוד להתאושש מאונס כאשר האדם מותקף בעוצמה מבפנים על היותו חסר אחריות. החלמה אפשרית רק עם תחילתה של קבלה של עצמנו על פגמינו.</p>
+            </article>
+
+            <aside class="sidebar">
+                <div class="sidebar-card">
+                    <img src="/assets/sidebart-6.webp" alt="עוזי כרמי - פסיכולוג קליני" data-image-index="0" loading="lazy">
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    
+    <!-- Legal Footer -->
+    <footer class="legal-footer">
+      <div class="container">
+        <div class="footer-main">
+          <div class="all-rights-reserved">
+            <p>© 2026 עוזי כרמי. כל הזכויות שמורות.</p>
+          </div>
+          
+          <div class="footer-legal">
+            <a href="/privacy" aria-label="מדיניות פרטיות">
+              מדיניות פרטיות
+            </a>
+            <span class="separator">|</span>
+            <a href="/accessibility" aria-label="נגישות">
+              נגישות
+            </a>
+            <span class="separator">|</span>
+            <a href="/terms" aria-label="תנאי שימוש">
+              תנאי שימוש
+            </a>
+          </div>
+        </div>
+        <div class="zappy-attribution">
+          <p>נוצר באמצעות&nbsp;<a href="https://zappy5.com" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">Zappy</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileMenuClose = document.querySelector('.mobile-menu-close');
+        const nav = document.querySelector('nav');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            nav.classList.add('active');
+            mobileMenuToggle.setAttribute('aria-expanded', 'true');
+            document.body.style.overflow = 'hidden';
+        });
+
+        mobileMenuClose.addEventListener('click', () => {
+            nav.classList.remove('active');
+            mobileMenuToggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!nav.contains(e.target) && !mobileMenuToggle.contains(e.target) && nav.classList.contains('active')) {
+                nav.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && nav.classList.contains('active')) {
+                nav.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
+
+
+<!-- Zappy Attribution Header Script -->
+<script>
+(function() {
+  var websiteId = 'd84459d1-13a6-4942-9a75-c9daf4fd4691';
+  
+  // Don't show header in preview mode
+  var currentUrl = window.location.href;
+  var isPreview = currentUrl.includes('/preview/') || 
+                  currentUrl.includes('/preview-fullscreen/') || 
+                  currentUrl.includes('localhost:5001') ||
+                  currentUrl.includes('localhost:3000');
+  
+  if (isPreview) {
+    return; // Exit early in preview mode
+  }
+  
+  fetch('https://qaapi.zappy5.com/api/website/' + websiteId + '/tier')
+    .then(function(response) { return response.json(); })
+    .then(function(data) {
+      if (data.showAttribution) {
+        var header = document.getElementById('zappy-attribution-header');
+        if (header) {
+          // Use dynamic announcement content if available
+          if (data.announcement && data.announcement.html) {
+            header.innerHTML = data.announcement.html;
+          }
+          // Apply fixed positioning styles inline (works for existing sites too)
+          header.style.cssText = 'position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; width: 100% !important; z-index: 99999 !important; display: flex !important; justify-content: center !important; align-items: center !important; text-align: center !important; box-sizing: border-box !important;';
+          // Fix child elements that might have position: fixed from old CSS
+          var children = header.querySelectorAll('*');
+          for (var i = 0; i < children.length; i++) {
+            children[i].style.position = 'static';
+          }
+          // Get header height
+          var headerHeight = header.offsetHeight;
+          // Find and fix navbar to be fixed as well (prevents gap at top of page)
+          var navSelectors = ['nav', '.navbar', '.nav'];
+          var navbar = null;
+          for (var j = 0; j < navSelectors.length; j++) {
+            navbar = document.querySelector(navSelectors[j]);
+            if (navbar && navbar.id !== 'zappy-attribution-header') break;
+            navbar = null;
+          }
+          if (navbar) {
+            var navbarHeight = navbar.offsetHeight;
+            navbar.style.cssText += '; position: fixed !important; top: ' + headerHeight + 'px !important; left: 0 !important; right: 0 !important; width: 100% !important; z-index: 99998 !important;';
+            document.body.style.paddingTop = (headerHeight + navbarHeight) + 'px';
+          } else {
+            document.body.style.paddingTop = headerHeight + 'px';
+          }
+        }
+      }
+    })
+    .catch(function(error) {
+      console.error('Failed to check tier:', error);
+    });
+})();
+</script>
+    <div data-integration="accessibility:toolbar"></div>
+
+    <script id="zappy-mobile-submenu-script">
+    (function() {
+      function initMobileSubmenuToggles() {
+        if (window.innerWidth > 768) {
+          document.querySelectorAll('.mobile-submenu-toggle').forEach(function(btn) { btn.remove(); });
+          document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) { menu.classList.remove('mobile-expanded'); });
+          return;
+        }
+        var items = document.querySelectorAll('.nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu)');
+        items.forEach(function(li) {
+          if (li.querySelector('.mobile-submenu-toggle')) return;
+          var submenu = li.querySelector('.sub-menu');
+          var parentLink = li.querySelector(':scope > a');
+          if (!submenu || !parentLink) return;
+          var toggleBtn = document.createElement('button');
+          toggleBtn.className = 'mobile-submenu-toggle';
+          toggleBtn.setAttribute('aria-label', 'Toggle submenu');
+          toggleBtn.setAttribute('type', 'button');
+          parentLink.insertAdjacentElement('afterend', toggleBtn);
+          toggleBtn.addEventListener('click', function(e) {
+            e.preventDefault(); e.stopPropagation();
+            document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) {
+              if (menu !== submenu) { menu.classList.remove('mobile-expanded'); var t = menu.parentElement.querySelector('.mobile-submenu-toggle'); if(t) t.classList.remove('expanded'); }
+            });
+            submenu.classList.toggle('mobile-expanded');
+            toggleBtn.classList.toggle('expanded');
+          });
+        });
+      }
+      if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initMobileSubmenuToggles); }
+      else { initMobileSubmenuToggles(); }
+      var resizeTimer; window.addEventListener('resize', function() { clearTimeout(resizeTimer); resizeTimer = setTimeout(initMobileSubmenuToggles, 250); });
+    })();
+    </script>
+    <script src="/script.js"></script>
+</body></html>

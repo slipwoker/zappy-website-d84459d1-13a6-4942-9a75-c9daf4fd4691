@@ -1,0 +1,903 @@
+<!DOCTYPE html><html lang="he" dir="rtl"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="מאמר על ארעיות, אבל והכרה במציאות - חלק שלישי. עוזי כרמי, פסיכולוג קליני, דן בהשלמה עם ארעיות החיים, הבחירה בין התרחקות למגע עם המציאות, והקשר בין פסיכואנליזה לבודהיזם.">
+    <meta name="robots" content="index, follow">
+    <title>Transience Part3</title>
+    <style>
+        :root {
+            --primary-dark: #3D3C47;
+            --accent-green: #5B7432;
+            --text-gray: #707070;
+            --medium-gray: #999999;
+            --light-gray: #E0E0E0;
+            --border-gray: #DBDBDB;
+            --white: #FFFFFF;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: var(--text-gray);
+            background-color: var(--white);
+            direction: rtl;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            background: var(--accent-green);
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            z-index: 100;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid var(--accent-green);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .logo {
+            flex-shrink: 0;
+        }
+
+        .logo a {
+            display: block;
+            line-height: 0;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+            transition: var(--transition);
+        }
+
+        .logo img:hover {
+            transform: scale(1.05);
+        }
+
+        nav {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--primary-dark);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: var(--transition);
+            font-weight: 500;
+            font-size: 0.95rem;
+            white-space: nowrap;
+        }
+
+        nav a:hover {
+            background-color: var(--light-gray);
+            color: var(--accent-green);
+        }
+
+        nav a:focus {
+            outline: 2px solid var(--accent-green);
+            outline-offset: 2px;
+        }
+
+        nav a.active {
+            background-color: var(--accent-green);
+            color: var(--white);
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 1001;
+        }
+
+        .mobile-menu-toggle:focus {
+            outline: 2px solid var(--accent-green);
+            outline-offset: 2px;
+        }
+
+        main {
+            min-height: 60vh;
+        }
+
+        .article-hero {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--accent-green) 100%);
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .article-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .article-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .article-sidebar {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .article-content {
+            background: var(--white);
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 2;
+            text-align: justify;
+        }
+
+        .sidebar {
+            position: sticky;
+            top: 120px;
+            height: fit-content;
+        }
+
+        .sidebar-card {
+            background: var(--white);
+            border: 1px solid var(--border-gray);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .sidebar-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+
+        .sidebar-card h3 {
+            color: var(--primary-dark);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            padding: 3rem 2rem 1.5rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--accent-green);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: var(--light-gray);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: var(--transition);
+        }
+
+        .footer-section a:hover {
+            color: var(--white);
+            padding-right: 5px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--medium-gray);
+        }
+
+        @media (max-width: 1024px) {
+            .article-sidebar {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: static;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 1rem;
+            }
+
+            .logo img {
+                height: 50px;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 300px;
+                height: 100vh;
+                background-color: var(--white);
+                flex-direction: column;
+                padding: 5rem 1rem 2rem;
+                box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+                transition: right 0.3s ease;
+                overflow-y: auto;
+                align-items: stretch;
+            }
+
+            nav.active {
+                right: 0;
+            }
+
+            nav a {
+                padding: 1rem;
+                border-bottom: 1px solid var(--light-gray);
+                white-space: normal;
+            }
+
+            .article-hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .article-container,
+            .article-sidebar {
+                padding: 2rem 1rem;
+            }
+
+            .article-content p {
+                font-size: 1rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .article-hero {
+                padding: 3rem 1rem;
+            }
+
+            .article-hero h1 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media print {
+            header,
+            footer,
+            .sidebar,
+            .mobile-menu-toggle {
+                display: none;
+            }
+
+            .article-sidebar {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<style>
+/* Zappy Attribution Header Styles */
+.zappy-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.04);
+  padding: 16px 10px;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  color: #4a4a4a;
+  line-height: 21px;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 21px;
+  direction: ltr !important;
+  unicode-bidi: isolate;
+}
+
+    .zappy-header p {
+      margin: 0;
+      padding: 0;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+      white-space: nowrap;
+      display: inline-block;
+      vertical-align: baseline;
+      margin-bottom: 0 !important;
+      direction: ltr !important;
+    }
+
+.zappy-header .zappy-link {
+  font-weight: 700;
+  color: #4a4a4a;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.zappy-header .zappy-link:hover {
+  opacity: 0.7;
+}</style>
+    <!-- Cookie Consent -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
+    <!-- Mickidum Accessibility Toolbar -->
+    <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
+<!-- Zappy Analytics -->
+<script>
+(function() {
+  'use strict';
+  
+  // Configuration
+  var config = {
+    websiteId: 'd84459d1-13a6-4942-9a75-c9daf4fd4691',
+    apiUrl: 'https://qaapi.zappy5.com/api/analytics/track',
+    sessionDuration: 30 * 60 * 1000, // 30 minutes
+    visitorDuration: 30 * 24 * 60 * 60 * 1000, // 30 days
+    trackPageViews: true,
+    trackClicks: true,
+    trackFormSubmissions: true
+  };
+  
+  // Generate or retrieve persistent visitor ID (30 days)
+  function getVisitorId() {
+    var visitorKey = 'zappy_visitor_' + config.websiteId;
+    var visitor = null;
+    
+    try {
+      visitor = localStorage.getItem(visitorKey);
+      if (visitor) {
+        var visitorData = JSON.parse(visitor);
+        var now = Date.now();
+        
+        // Check if visitor ID is still valid (30 days)
+        if (now - visitorData.created < config.visitorDuration) {
+          // Update last seen timestamp
+          visitorData.lastSeen = now;
+          localStorage.setItem(visitorKey, JSON.stringify(visitorData));
+          return visitorData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: LocalStorage not available');
+    }
+    
+    // Generate new visitor ID
+    var newVisitorId = 'zv_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      localStorage.setItem(visitorKey, JSON.stringify({
+        id: newVisitorId,
+        created: Date.now(),
+        lastSeen: Date.now()
+      }));
+    } catch (e) {
+      // Continue without local storage
+    }
+    
+    return newVisitorId;
+  }
+  
+  // Generate or retrieve session ID (30 minutes)
+  function getSessionId() {
+    var sessionKey = 'zappy_session_' + config.websiteId;
+    var session = null;
+    
+    try {
+      session = sessionStorage.getItem(sessionKey);
+      if (session) {
+        var sessionData = JSON.parse(session);
+        var now = Date.now();
+        
+        // Check if session is still valid
+        if (now - sessionData.timestamp < config.sessionDuration) {
+          // Update timestamp
+          sessionData.timestamp = now;
+          sessionStorage.setItem(sessionKey, JSON.stringify(sessionData));
+          return sessionData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: SessionStorage not available');
+    }
+    
+    // Generate new session ID
+    var newSessionId = 'zs_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      sessionStorage.setItem(sessionKey, JSON.stringify({
+        id: newSessionId,
+        timestamp: Date.now()
+      }));
+    } catch (e) {
+      // Continue without session storage
+    }
+    
+    return newSessionId;
+  }
+  
+  var visitorId = getVisitorId();
+  var sessionId = getSessionId();
+  
+  // Track an event
+  function trackEvent(eventType, data) {
+    data = data || {};
+    
+    var eventData = {
+      website_id: config.websiteId,
+      event_type: eventType,
+      page_path: window.location.pathname,
+      referrer: document.referrer || 'direct',
+      visitor_id: visitorId,
+      session_id: sessionId,
+      metadata: data
+    };
+    
+    // Use sendBeacon if available (better for page unload events)
+    if (navigator.sendBeacon) {
+      var blob = new Blob([JSON.stringify(eventData)], { type: 'application/json' });
+      navigator.sendBeacon(config.apiUrl, blob);
+    } else {
+      // Fallback to fetch
+      fetch(config.apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(eventData),
+        keepalive: true
+      }).catch(function(error) {
+        console.warn('Zappy Analytics: Failed to track event', error);
+      });
+    }
+  }
+  
+  // Track page view
+  if (config.trackPageViews) {
+    trackEvent('pageview', {
+      title: document.title,
+      url: window.location.href
+    });
+  }
+  
+  // Track clicks on important elements
+  if (config.trackClicks) {
+    document.addEventListener('click', function(e) {
+      var target = e.target;
+      
+      // Track button clicks (counted as actions)
+      if (target.tagName === 'BUTTON' || target.closest('button')) {
+        var button = target.tagName === 'BUTTON' ? target : target.closest('button');
+        trackEvent('click', {
+          element: 'button',
+          text: button.textContent.trim().substring(0, 100),
+          id: button.id || null,
+          class: button.className || null
+        });
+      }
+      
+      // Track link clicks (navigation - not counted as actions)
+      else if (target.tagName === 'A' || target.closest('a')) {
+        var link = target.tagName === 'A' ? target : target.closest('a');
+        trackEvent('navigation', {
+          element: 'link',
+          text: link.textContent.trim().substring(0, 100),
+          href: link.href,
+          external: link.hostname !== window.location.hostname
+        });
+      }
+    }, true);
+  }
+  
+  // Track form submissions
+  if (config.trackFormSubmissions) {
+    document.addEventListener('submit', function(e) {
+      var form = e.target;
+      
+      trackEvent('form_submit', {
+        form_id: form.id || null,
+        form_name: form.name || null,
+        form_action: form.action || null,
+        form_method: form.method || 'GET'
+      });
+    }, true);
+  }
+  
+  // Track time on page (send on page unload)
+  var pageLoadTime = Date.now();
+  
+  window.addEventListener('beforeunload', function() {
+    var timeOnPage = Math.floor((Date.now() - pageLoadTime) / 1000); // in seconds
+    
+    trackEvent('page_unload', {
+      time_on_page: timeOnPage,
+      page_path: window.location.pathname
+    });
+  });
+  
+  // Expose tracking function globally for custom events
+  window.zappyAnalytics = {
+    track: trackEvent,
+    getVisitorId: function() { return visitorId; },
+    getSessionId: function() { return sessionId; }
+  };
+  
+})();
+</script>
+<!-- End Zappy Analytics -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style id="zappy-mobile-submenu-styles">
+      /* Mobile submenu accordion styles */
+      @media (max-width: 768px) {
+        .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu {
+          position: static !important;
+          transform: none !important;
+          box-shadow: none !important;
+          background: transparent !important;
+          margin-top: 0 !important;
+          max-height: 0;
+          overflow: hidden;
+          opacity: 0;
+          visibility: hidden;
+          transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, padding 0.3s ease;
+          padding: 0 !important;
+          border-radius: 0 !important;
+        }
+        .sub-menu.mobile-expanded {
+          max-height: 500px !important;
+          opacity: 1 !important;
+          visibility: visible !important;
+          padding: 8px 0 8px 16px !important;
+        }
+        [dir="rtl"] .sub-menu.mobile-expanded, html[lang="he"] .sub-menu.mobile-expanded, html[lang="ar"] .sub-menu.mobile-expanded {
+          padding: 8px 16px 8px 0 !important;
+        }
+        .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu {
+          opacity: 0; visibility: hidden; pointer-events: none;
+        }
+        .nav-menu li > .sub-menu.mobile-expanded, nav li > .sub-menu.mobile-expanded, .navbar li > .sub-menu.mobile-expanded, #navMenu li > .sub-menu.mobile-expanded {
+          opacity: 1 !important; visibility: visible !important; pointer-events: auto !important;
+        }
+        .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) {
+          display: flex !important; flex-wrap: wrap !important; align-items: center !important;
+        }
+        .nav-menu li:has(.sub-menu) > a, nav li:has(.sub-menu) > a, .navbar li:has(.sub-menu) > a, #navMenu li:has(.sub-menu) > a {
+          flex: 1 !important;
+        }
+        .mobile-submenu-toggle {
+          display: flex !important; align-items: center !important; justify-content: center !important;
+          width: 44px !important; height: 44px !important; background: transparent !important;
+          border: none !important; cursor: pointer !important; padding: 0 !important; margin: 0 !important;
+          flex-shrink: 0 !important; -webkit-tap-highlight-color: transparent;
+        }
+        .mobile-submenu-toggle::after {
+          content: '' !important; display: block !important; width: 0 !important; height: 0 !important;
+          border-left: 6px solid transparent !important; border-right: 6px solid transparent !important;
+          border-top: 7px solid currentColor !important; transition: transform 0.3s ease !important;
+        }
+        .mobile-submenu-toggle.expanded::after { transform: rotate(180deg) !important; }
+        .nav-menu li:has(.sub-menu) > .sub-menu, nav li:has(.sub-menu) > .sub-menu, .navbar li:has(.sub-menu) > .sub-menu, #navMenu li:has(.sub-menu) > .sub-menu {
+          flex-basis: 100% !important; width: 100% !important;
+        }
+        .sub-menu a { padding: 10px 0 !important; display: block !important; font-size: 14px !important; }
+        .sub-menu a:hover { background-color: transparent !important; }
+      }
+      @media (min-width: 769px) { .mobile-submenu-toggle { display: none !important; } }
+    </style>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<!-- Zappy Attribution Header -->
+<div id="zappy-attribution-header" class="zappy-header" style="display: none;">
+  <p>Happily created by&nbsp;<a href="https://zappy5.com" target="_blank" rel="noopener noreferrer" class="zappy-link">Zappy</a></p>
+</div>
+    <a href="#main-content" class="skip-link">דלג לתוכן הראשי</a>
+
+    <header role="banner">
+        <div class="header-container">
+            <div class="logo">
+                <a href="/" aria-label="עוזי כרמי - פסיכולוג קליני - דף הבית">
+                    <img src="/assets/textwidget-5.webp" alt="עוזי כרמי - פסיכולוג קליני" width="150" height="60">
+                </a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="תפריט ניווט" aria-expanded="false">
+                ☰
+            </button>
+            <nav role="navigation" aria-label="ניווט ראשי">
+                <a href="/background/">רקע והכשרה</a>
+                <a href="/psychology/">מה זה טיפול פסיכולוגי ?</a>
+                <a href="/difficulties/">קשיים שונים</a>
+                <a href="/faq/">שאלות ותשובות</a>
+                <a href="/articles/">מאמרים</a>
+                <a href="/contact/">צור קשר</a>
+                <a href="/difficulties/ptsd/">Ptsd</a>
+                <a href="/difficulties/anxiety-treatment/">Anxiety Treatment</a>
+                <a href="/faq/approach/">Approach</a>
+                <a href="/faq/howmuchtime/">Howmuchtime</a>
+                <a href="/faq/transferance/">Transferance</a>
+                <a href="/faq/clinical-transferance/">Clinical Transferance</a>
+                <a href="/faq/tired/">Tired</a>
+                <a href="/faq/meditation/">Meditation</a>
+                <a href="/articles/transience/">Transience</a>
+                <a href="/articles/transience-part2/">Transience Part2</a>
+                <a href="/articles/transience-part3/" class="active">Transience Part3</a>
+                <a href="/articles/psychoanalysis/">Psychoanalysis</a>
+                <a href="/articles/freud/">Freud</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+        <section class="article-hero">
+            <h1>Transience Part3</h1>
+        </section>
+
+        <div class="article-sidebar">
+            <article class="article-content">
+                <p>אם כן, אנו תופסים את המציאות כמתחלקת לאובייקטים קבועים ונפרדים. אנו מתאווים לאובייקטים שישרו עלינו ביטחון ונועם ומנסים להתרחק מאלו שיגרמו לנו מצוקה. תפיסה זו עומדת בבסיס הנטייה הקפיטליסטית, ההולכת ומקצינה בעשורים האחרונים, לצבור עוד ועוד רכוש. כאילו האחיזה ברכוש רב היא שתוליד אושר. תפיסה זו עומדת בבסיס הנטייה שלנו להיאחז בדברים. התחתנתי עם אשתי כיוון שהיא צעירה, יפה ונעימה. אינני מוכן לתת לה להזדקן, לאבד מחינה או לנהוג באופן זועף ולא נעים. אני רוצה לקבע אותה לדמות האישה שאני אוהב ואינני מניח לה להשתנות או פשוט להיות כפי שהיא בזמנים שונים. אינני מוכן לתת לה לחיות.</p>
+
+                <p>בקריאה ראשונה בטקסט של פרויד עשויה להתעורר התנשאות מסוימת כלפי רילקה. חוסר היכולת שלו ליהנות מהנוף המוריק בגלל שהוא רואה את החורף מגיע עשוי לעורר גיחוך. חוסר מוכנותו לחיות בהווה בגלל ארעיותו היא מעט קיצונית. אלא שבמובן מסוים רבים מאיתנו סובלים מהפרעה דומה. רווק הממאן להתחתן, הורה הממאן לתת לילדיו לגדול ולהתרחק ממנו, מבוגרים הממאנים להכיר בזקנה. במידה זו או אחרת כולם לא מוכנים לאכול את המנה שמציעים להם החיים. כולם נאחזים בביטחון מדומה שמציעה קביעות מדומה. כולם סובלים מכך שביטחון מדומה זה מרחיק אותם מזרם החיים ומפחית מחיותם. הכרה בארעיות קשורה באבל. כולנו נמות. כל הקרובים אלינו ימותו. יופיינו יחלוף, כוחנו ייתש, עלומינו יחלפו, שכלנו יכהה. אנו עומדים לאבד את כל מה שיקר לנו. את מעמדנו, ערכנו, קשרנו הטובים, חיינו. חוסר היכולת להתאבל על שעבר ולהיפרד ממנו רודפת רבים מאיתנו. לא רק שאיננו מסוגלים לראות את הכוס השלמה כשבורה, כמו אג'הן צ'ה, אלא שאנו מתעקשים להחיות רוחות רפאים של כוסות שמזמן שבו והפכו לחול.</p>
+
+                <p>עתה נוכל להבין כיצד ריפא הבודהה את גוטאמי. המרפא שבודהה הציע הוא מגע עם החיים וחוויה ישירה של ארעיותם. הוא מראה לגוטאמי שלא ניתן להימלט מכך שהכל בן חלוף ושכל דבר טוב שאנו נאחזים בו יכלה. כמו שהכוס של אג'הן צ'ה היא כבר שבורה בודהה מראה לגוטאמי שבנה מת מאז ומתמיד ושהכבוד שרחשו לה התפוגג עוד כשהיה. גוטאמי נחלצת מאבלה כיוון שהיא חווה רגע של הארה. רגע בו היא תופסת את האמת העמוקה והפשוטה של המציאות: הכל בן חלוף. הכל יכלה וימות ויש בכך כאב, אך הסבל שבהתרחקות מהחיים קשה יותר.</p>
+
+                <p>בשפה פסיכואנליטית ניתן לאמר שבודהה כיוון את גוטאמי למעיין עמדה דיכאונית אוניברסאלית. הכוונה כאן אינה למגע עם כל חלקי החוויה הפנימית: הטובים והרעים אלא למגע מלא עם המציאות הפנימית והחיצונית למרות שבמציאות כולה יש גם כאב, כליה ומוות. הכליה והמוות מכאיבים, אך התרחקות הגנתית מהם מובילה לתוצאות חמורות יותר.</p>
+
+                <p>במובן מסיום המטופל שתארתי ורילקה צודקים. אי-אפשר לסמוך על הקביעות של הטוב שבעולם, הוא יעלם והיופי יחלוף. אך במובן עמוק יותר הם טועים. אם הטוב והיפה הם בני חלוף, כדאי לחיות במגע מירבי איתם עד כמה שניתן כאשר הם נמצאים. גוטאמי הרזה הבינה זאת והדבר חילץ אותה מאבלה. הכל חולף. הבן שחי היום ימות מחר. חווית הערך שניתנת ברגע זה תילקח ברגע הבא. זו דרכו של העולם. הבחירה היא האם לסרב למוות, לסגת מהעולם וכך למות או להשלים עם המוות וכך לחיות. כשרילקה לא מניח לעצמו ליהנות מיפי הטבע מתוך הידיעה שיאבד, הוא נמנע ממגע עם האמת. עם המציאות. מגע ישיר עמה לא רק שלא ידכא אותו, אלא יחזיר אותו להנאה מהחוויה הישירה.</p>
+
+                <p>העמדה שבודהה מדבר עליה ושאליה מכוון אג'הן צ'ה היא עמדה הנוגעת בחיים באשר הם, על היופי והכאב, הלבלוב והדעיכה. מגע כזה בחיים הוא קרוב ואינטימי אך לא נאחז. בעמדה כזו איננו מקווים שהאובייקטים ישארו קבועים, מנחמים וטובים כפי שהכרנו אותם. הכס כבר שבורה. האובייקט כבר מאכזב. במאמרו פרויד כותב שאחרי החורף יגיע שוב אביב, אך למען האמת אין כל דרך לדעת זאת. לפחות אחד החורפים שנחווה יהיה החורף האחרון בחיינו. כל שאנו יודעים הוא שהחורף נמצא כרגע והפרחים אינם מלבלבים בחורף. הבחירה שלנו היא האם להשלים עם כך, להשאר במגע עם המציאות ולחיות, או לסגת מהמציאות וכך בעצם למות. הבחירה היא האם להיות אג'הן צ'ה או רילקה. האם ההכרה או המגע עם הכאב והכליה יגרמו לנו להתרחק בצורה הגנתית ממה שקורה באמת, או שנשאר עם החיים – בין אם הם נעימים או קשים ונתיר להם להיות מה שהם בלי להיאחז בטוב. במובן מסויים אלו הן שתי הברירות היחידות שקימות – רילקה או אג'הן צ'ה.</p>
+
+                <p>כשגוטאמי חוזרת לבודהה הוא אומר: "אדם שרוחו נצמדת בעווית לצאצאים או לרכוש עתיד להסחף על-ידי המוות אשר מגיח כשיטפון אדיר על עיר נמה". ברמה מסויימת ניתן לאמר שהבודהה אומר שמי שיאחז ביקיריו כמו שגוטאמי נאחזה יופתע על-ידי מותם וישבר. ברמה נוספת אפשר לחשוב שהוא מכוון לכך שמי שיחסו ליקיריו הוא יחס נאחז. יחס בו הוא מצפה מהם להיות מה שנחוץ לו ואינו מוכן שיהיו מה שהם הוא אדם שאינו חי. המוות כבר מציף אותו, כיוון שהוא לא חי את החיים כפי שהם. הוא בוחר להיות רילקה ולא אג'הן צ'ה.</p>
+            </article>
+
+            <aside class="sidebar" role="complementary" aria-label="תוכן משלים">
+                <div class="sidebar-card">
+                    <img src="/assets/sidebart-4.webp" alt="פסיכולוגיה ובודהיזם" data-image-index="0" loading="lazy" width="308" height="467">
+                    <h3>פסיכולוגיה ובודהיזם</h3>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    
+    <!-- Legal Footer -->
+    <footer class="legal-footer">
+      <div class="container">
+        <div class="footer-main">
+          <div class="all-rights-reserved">
+            <p>© 2026 עוזי כרמי. כל הזכויות שמורות.</p>
+          </div>
+          
+          <div class="footer-legal">
+            <a href="/privacy" aria-label="מדיניות פרטיות">
+              מדיניות פרטיות
+            </a>
+            <span class="separator">|</span>
+            <a href="/accessibility" aria-label="נגישות">
+              נגישות
+            </a>
+            <span class="separator">|</span>
+            <a href="/terms" aria-label="תנאי שימוש">
+              תנאי שימוש
+            </a>
+          </div>
+        </div>
+        <div class="zappy-attribution">
+          <p>נוצר באמצעות&nbsp;<a href="https://zappy5.com" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">Zappy</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const nav = document.querySelector('nav');
+        
+        mobileMenuToggle.addEventListener('click', function() {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !isExpanded);
+            nav.classList.toggle('active');
+            this.textContent = nav.classList.contains('active') ? '✕' : '☰';
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickInsideNav = nav.contains(event.target);
+            const isClickOnToggle = mobileMenuToggle.contains(event.target);
+            
+            if (!isClickInsideNav && !isClickOnToggle && nav.classList.contains('active')) {
+                nav.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                mobileMenuToggle.textContent = '☰';
+            }
+        });
+
+        // Close mobile menu when pressing Escape
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && nav.classList.contains('active')) {
+                nav.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                mobileMenuToggle.textContent = '☰';
+                mobileMenuToggle.focus();
+            }
+        });
+
+        // Smooth scroll for skip link
+        document.querySelector('.skip-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#main-content').focus();
+            document.querySelector('#main-content').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+
+
+<!-- Zappy Attribution Header Script -->
+<script>
+(function() {
+  var websiteId = 'd84459d1-13a6-4942-9a75-c9daf4fd4691';
+  
+  // Don't show header in preview mode
+  var currentUrl = window.location.href;
+  var isPreview = currentUrl.includes('/preview/') || 
+                  currentUrl.includes('/preview-fullscreen/') || 
+                  currentUrl.includes('localhost:5001') ||
+                  currentUrl.includes('localhost:3000');
+  
+  if (isPreview) {
+    return; // Exit early in preview mode
+  }
+  
+  fetch('https://qaapi.zappy5.com/api/website/' + websiteId + '/tier')
+    .then(function(response) { return response.json(); })
+    .then(function(data) {
+      if (data.showAttribution) {
+        var header = document.getElementById('zappy-attribution-header');
+        if (header) {
+          // Use dynamic announcement content if available
+          if (data.announcement && data.announcement.html) {
+            header.innerHTML = data.announcement.html;
+          }
+          // Apply fixed positioning styles inline (works for existing sites too)
+          header.style.cssText = 'position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; width: 100% !important; z-index: 99999 !important; display: flex !important; justify-content: center !important; align-items: center !important; text-align: center !important; box-sizing: border-box !important;';
+          // Fix child elements that might have position: fixed from old CSS
+          var children = header.querySelectorAll('*');
+          for (var i = 0; i < children.length; i++) {
+            children[i].style.position = 'static';
+          }
+          // Get header height
+          var headerHeight = header.offsetHeight;
+          // Find and fix navbar to be fixed as well (prevents gap at top of page)
+          var navSelectors = ['nav', '.navbar', '.nav'];
+          var navbar = null;
+          for (var j = 0; j < navSelectors.length; j++) {
+            navbar = document.querySelector(navSelectors[j]);
+            if (navbar && navbar.id !== 'zappy-attribution-header') break;
+            navbar = null;
+          }
+          if (navbar) {
+            var navbarHeight = navbar.offsetHeight;
+            navbar.style.cssText += '; position: fixed !important; top: ' + headerHeight + 'px !important; left: 0 !important; right: 0 !important; width: 100% !important; z-index: 99998 !important;';
+            document.body.style.paddingTop = (headerHeight + navbarHeight) + 'px';
+          } else {
+            document.body.style.paddingTop = headerHeight + 'px';
+          }
+        }
+      }
+    })
+    .catch(function(error) {
+      console.error('Failed to check tier:', error);
+    });
+})();
+</script>
+    <div data-integration="accessibility:toolbar"></div>
+
+    <script id="zappy-mobile-submenu-script">
+    (function() {
+      function initMobileSubmenuToggles() {
+        if (window.innerWidth > 768) {
+          document.querySelectorAll('.mobile-submenu-toggle').forEach(function(btn) { btn.remove(); });
+          document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) { menu.classList.remove('mobile-expanded'); });
+          return;
+        }
+        var items = document.querySelectorAll('.nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu)');
+        items.forEach(function(li) {
+          if (li.querySelector('.mobile-submenu-toggle')) return;
+          var submenu = li.querySelector('.sub-menu');
+          var parentLink = li.querySelector(':scope > a');
+          if (!submenu || !parentLink) return;
+          var toggleBtn = document.createElement('button');
+          toggleBtn.className = 'mobile-submenu-toggle';
+          toggleBtn.setAttribute('aria-label', 'Toggle submenu');
+          toggleBtn.setAttribute('type', 'button');
+          parentLink.insertAdjacentElement('afterend', toggleBtn);
+          toggleBtn.addEventListener('click', function(e) {
+            e.preventDefault(); e.stopPropagation();
+            document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) {
+              if (menu !== submenu) { menu.classList.remove('mobile-expanded'); var t = menu.parentElement.querySelector('.mobile-submenu-toggle'); if(t) t.classList.remove('expanded'); }
+            });
+            submenu.classList.toggle('mobile-expanded');
+            toggleBtn.classList.toggle('expanded');
+          });
+        });
+      }
+      if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initMobileSubmenuToggles); }
+      else { initMobileSubmenuToggles(); }
+      var resizeTimer; window.addEventListener('resize', function() { clearTimeout(resizeTimer); resizeTimer = setTimeout(initMobileSubmenuToggles, 250); });
+    })();
+    </script>
+    <script src="/script.js"></script>
+</body></html>

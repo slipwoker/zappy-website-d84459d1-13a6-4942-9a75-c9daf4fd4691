@@ -1,0 +1,33 @@
+# Clean URL redirects for Render static hosting
+# These rewrite rules show clean URLs to users while serving .html files
+
+/background/  /background.html  200
+/psychology/  /psychology.html  200
+/difficulties/  /difficulties.html  200
+/faq/  /faq.html  200
+/articles/  /articles.html  200
+/contact/  /contact.html  200
+/difficulties/ptsd/  /difficulties/ptsd.html  200
+/difficulties/anxiety-treatment/  /difficulties/anxiety-treatment.html  200
+/faq/approach/  /faq/approach.html  200
+/faq/howmuchtime/  /faq/howmuchtime.html  200
+/faq/transferance/  /faq/transferance.html  200
+/faq/clinical-transferance/  /faq/clinical-transferance.html  200
+/faq/tired/  /faq/tired.html  200
+/faq/meditation/  /faq/meditation.html  200
+/articles/transience/  /articles/transience.html  200
+/articles/transience-part2/  /articles/transience-part2.html  200
+/articles/transience-part3/  /articles/transience-part3.html  200
+/privacy  /privacy.html  200
+/accessibility  /accessibility.html  200
+/terms  /terms.html  200
+
+# Legal pages - redirect old .html URLs to friendly URLs
+/privacy.html  /privacy  301
+/accessibility.html  /accessibility  301
+/terms.html  /terms  301
+
+/  /index.html  200
+
+# 404 fallback
+/*  /index.html  404
